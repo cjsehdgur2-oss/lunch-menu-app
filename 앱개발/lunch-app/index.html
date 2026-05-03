@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오늘 점심 뭐 먹지?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero" aria-labelledby="app-title">
+      <p class="eyebrow">Lunch Picker</p>
+      <h1 id="app-title">오늘 점심 뭐 먹지?</h1>
+      <p class="intro">음식 종류와 가격대만 고르면, 지금 먹기 좋은 메뉴를 하나 골라드릴게요.</p>
+    </section>
+
+    <section class="card" aria-label="점심 메뉴 추천 조건">
+      <div class="field">
+        <label for="category">음식 종류 선택</label>
+        <select id="category">
+          <option value="상관없음">상관없음</option>
+          <option value="한식">한식</option>
+          <option value="중식">중식</option>
+          <option value="일식">일식</option>
+          <option value="양식">양식</option>
+          <option value="분식">분식</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="price">가격대 선택</label>
+        <select id="price">
+          <option value="상관없음">상관없음</option>
+          <option value="8000">8천원 이하</option>
+          <option value="10000">1만원 이하</option>
+        </select>
+      </div>
+
+      <button id="recommend-button" type="button">추천 받기</button>
+
+      <div class="result-box" aria-live="polite">
+        <span class="result-label">추천 결과</span>
+        <p id="result">아직 추천 전이에요.</p>
+        <p id="reason" class="reason">조건을 고르고 버튼을 눌러보세요.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
